@@ -1,0 +1,9 @@
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form {
+  padding: 20px;
+}
