@@ -1,11 +1,14 @@
 import React from "react";
 import { requestApi } from "../../helpers/request";
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import styles from "./TrendingToday.module.css";
 
 const TrendingToday = () => {
   const [movies, setMovies] = useState([]);
+
+  const location = useLocation();
+  console.log(location);
 
   const history = useHistory();
 
@@ -16,7 +19,10 @@ const TrendingToday = () => {
   }, []);
 
   const toUserPage = (id) => {
-    history.push(`/movies/${id}`);
+    history.push({
+      pathname: `/movies/${id}`,
+      state: { from: location.pathname },
+    });
   };
 
   return (

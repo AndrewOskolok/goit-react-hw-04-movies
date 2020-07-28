@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import { requestApi, baseImgUrl } from "../../helpers/request";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 // import Cast from "../Cast/Cast";
 // import Reviews from "../Reviews/Reviews";
@@ -11,14 +11,22 @@ const Reviews = lazy(() => import("../Reviews/Reviews"));
 
 const MovieDetailsPage = ({ history, match }) => {
   const [movie, setMovie] = useState({});
+  const [from, setFrom] = useState("");
+  const [search, setSearch] = useState("");
+
   let movieId = match.params.id;
+
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     requestApi(`/movie/${movieId}`).then((res) => setMovie(res.data));
-  }, [movieId]);
+    location.state && setFrom(location.state.from);
+    location.state && setSearch(location.state.search);
+  }, [movieId, location]);
 
   const goBack = () => {
-    history.goBack();
+    history.push({ pathname: from, search: search ? search : "" });
   };
 
   const {
