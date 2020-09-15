@@ -1,0 +1,1 @@
+{"version":3,"sources":["Cast.module.css"],"names":[],"mappings":"AAAA,sBACE,WAAY,CACZ,kBACF,CAEA,qBACE,aAAc,CACd,WACF","file":"7.93b60ce1.chunk.css","sourcesContent":[".castItem {\r\n  width: 160px;\r\n  margin-bottom: 25px;\r\n}\r\n\r\n.castImg {\r\n  margin: 0 auto;\r\n  width: 100px;\r\n}\r\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["SearchRequest.module.css"],"names":[],"mappings":"AAAA,2BACE,cAAe,CACf,UACF,CAEA,4CACE,kBACF","file":"9.26adeebf.chunk.css","sourcesContent":[".item {\r\n  cursor: pointer;\r\n  color: grey;\r\n}\r\n\r\n.item:not(:last-child) {\r\n  margin-bottom: 10px;\r\n}\r\n"]}

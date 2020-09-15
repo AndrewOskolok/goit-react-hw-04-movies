@@ -1,0 +1,1 @@
+{"version":3,"sources":["MoviesPage.module.css"],"names":[],"mappings":"AAAA,2BACE,WAAY,CACZ,aAAc,CACd,iBACF,CAEA,wBACE,YACF","file":"4.d28d2b8b.chunk.css","sourcesContent":[".wrapper {\r\n  width: 800px;\r\n  margin: 0 auto;\r\n  text-align: center;\r\n}\r\n\r\n.form {\r\n  padding: 20px;\r\n}\r\n"]}
